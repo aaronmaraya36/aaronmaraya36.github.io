@@ -17,16 +17,19 @@ body {
     background-color: #fff;
     color: #000;
     font-family: 'Outfit', sans-serif;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
 }
 
 div.container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+div.container div.content {
     margin: 20px;
+    max-width: 800px;
+    text-align: center;
 }
 
 span.header {
@@ -37,7 +40,6 @@ span.header {
 span.subheader {
     display: block;
     font-size: 1rem;
-    margin-bottom: 20px;
 }
 
 a.link {
@@ -47,8 +49,62 @@ a.link {
     margin: 0 2px 20px;
 }
 
+.flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: center;
+    text-align: left;
+}
+
+.flexbox .item {
+    flex: 0 0 100px;
+    border: 1px solid #000;
+    aspect-ratio: 1 / 1;
+    border-radius: 20%;
+    overflow: hidden;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+.flexbox a.item:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.flexbox a.item {
+    text-decoration: none;
+    color: inherit;
+}
+
+.flexbox a.deactivated {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: rgba(0, 0, 0, 0.5);
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.flexbox .item .icon {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.flexbox .item .text {
+    font-size: 0.8rem;
+    word-wrap: break-word;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .flexbox .item {
+        flex: 0 0 100px;
+    }
+}
+
 span.copyright {
     display: block;
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.3);
+    color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
 }
