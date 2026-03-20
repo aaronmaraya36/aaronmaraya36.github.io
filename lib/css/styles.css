@@ -43,6 +43,39 @@ body {
     display: block;
 }
 
+.tooltip {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    position: relative;
+    display: block;
+    cursor: pointer;
+
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 8px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-top: 5px;
+    margin-left: -75px;
+    font-size: 0.7rem;
+}
+
+.tooltiptext i {
+    margin-right: 7px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
 .links {
     margin-top: 20px;
 }
